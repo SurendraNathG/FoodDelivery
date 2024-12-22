@@ -1,0 +1,17 @@
+export default {
+  white: '#FFFFFF',
+  orange: '#FF7622',
+  black: '#32343E',
+  lightGrey: '#646982',
+  lightWhite: '#FFF2E0',
+  textInputBackground: '#F0F5FA',
+  transparent: 'rgba(0, 0, 0, 0.3)',
+  darkBlack: '#000',
+  error: '#FF0000',
+  placeHolderColor: '#A0A5BA',
+  lightBlack: '#7E8A97',
+  restaurantName: '#181C2E',
+  whiteBG: '#ECF0F4',
+  border: '#EDEDED',
+  cartBG: '#121223',
+};
