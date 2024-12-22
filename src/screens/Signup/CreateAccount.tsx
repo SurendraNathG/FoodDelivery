@@ -69,7 +69,8 @@ const CreateAccount = () => {
       !isEmailValid(email) ||
       !isPasswordValid(password) ||
       !isPasswordValid(retypePassword) ||
-      !isUsernameValid(name)
+      !isUsernameValid(name)||
+       password!==retypePassword
     ) {
       setEmailError(validateEmail(email));
       setPasswordError(validatePassword(password));
@@ -78,8 +79,9 @@ const CreateAccount = () => {
     } else if (
       isEmailValid(email) &&
       isPasswordValid(password) &&
-      isPasswordValid(password) &&
-      isUsernameValid(name)
+      isPasswordValid(retypePassword) &&
+      isUsernameValid(name)&&
+      password===retypePassword
     ) {
       showToast({
         bottom: 187,
