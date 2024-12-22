@@ -31,11 +31,9 @@ function CartData({item}: ICuisineItems) {
     }
   }
   function handleSubtract() {
-    if (count > 1) {
-      setInnerCount(prev => prev - 1);
-      const innerItem = {...item, count: innerCount - 1};
-      dispatch(addCardItems(innerItem));
-    }
+    setInnerCount(prev => prev - 1);
+    const innerItem = {...item, count: innerCount - 1};
+    dispatch(addCardItems(innerItem));
   }
   return (
     <View style={styles.mainContainer}>

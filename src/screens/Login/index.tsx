@@ -87,7 +87,7 @@ const Login = () => {
 
   function handleSignUp() {
     clearError();
-    navigation.navigate(screenNames.createAccount);
+    navigation.navigate(screenNames.home);
   }
   function handleForgotPassword() {
     clearError();

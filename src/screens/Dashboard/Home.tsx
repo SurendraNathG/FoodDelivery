@@ -62,6 +62,7 @@ const Home = () => {
           data={restaurants}
           renderItem={renderItem}
           keyExtractor={item => item?.id}
+          style={styles.bottomWrapper}
           showsVerticalScrollIndicator={false}
         />
       </View>
@@ -107,6 +108,9 @@ const styles = StyleSheet.create({
     fontSize: getFontSize(14),
     color: colors.white,
     fontFamily: fonts.regular,
+  },
+  bottomWrapper: {
+    marginBottom: '34%',
   },
 });
 

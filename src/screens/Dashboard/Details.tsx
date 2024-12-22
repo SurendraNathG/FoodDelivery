@@ -53,6 +53,7 @@ function Details() {
   }
 
   function handleCart() {
+    setCount(1);
     navigation.navigate(screenNames.cartItem);
   }
 

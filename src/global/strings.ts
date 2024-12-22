@@ -25,4 +25,5 @@ export default {
   totalAmount: 'Total Amount',
   youSuccessfully: 'You successfully maked a payment,enjoy our service!',
   congratulations: 'Congratulations!',
+  emptyList:'Cart is Empty'
 };

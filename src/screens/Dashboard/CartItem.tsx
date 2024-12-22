@@ -33,8 +33,17 @@ const CartItem = () => {
   }, [cartItems]);
 
   function handleCheckout() {
-    navigation.navigate(screenNames.checkout);
+    if (amount > 0) {
+      navigation.navigate(screenNames.checkout);
+    }
   }
+  const renderEmptyList = () => {
+    return (
+      <View style={styles.emptyWrapper}>
+        <Text style={styles.emptyText}>{strings.emptyList}</Text>
+      </View>
+    );
+  };
 
   return (
     <>
@@ -48,6 +57,7 @@ const CartItem = () => {
           renderItem={handleRender}
           keyExtractor={(item: any) => item?.id}
           style={styles.listWrapper}
+          ListEmptyComponent={renderEmptyList}
         />
       </View>
       <View style={styles.bottomContainer}>
@@ -97,6 +107,17 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: height(27),
     marginBottom: height(32),
+  },
+  emptyWrapper: {
+    marginTop: '50%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  emptyText: {
+    fontSize: getFontSize(28),
+    color: colors.white,
+    fontFamily: fonts.regular,
+    lineHeight: getFontSize(33.69),
   },
   bottomContainer: {
     backgroundColor: colors.textInputBackground,

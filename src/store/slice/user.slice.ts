@@ -28,9 +28,15 @@ export const userSlice = createSlice({
         item => item.id === newItem.id,
       );
       if (existingIndex !== -1) {
-        state.cartItems[existingIndex] = newItem;
+        if (newItem.count === 0) {
+          state.cartItems.splice(existingIndex, 1);
+        } else {
+          state.cartItems[existingIndex] = newItem;
+        }
       } else {
-        state.cartItems.push(newItem);
+        if (newItem.count !== 0) {
+          state.cartItems.push(newItem);
+        }
       }
     },
     setCartItems: (state, action) => {
